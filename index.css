@@ -306,7 +306,7 @@
       justify-content: center;
       gap: 8px;
       margin-top: 20px;
-       z-index: 2;
+      z-index: 2;
     }
 
     .boton {
@@ -317,7 +317,7 @@
       background: transparent;
       cursor: pointer;
       transition: background 0.3s;
-       z-index: 2;
+      z-index: 2;
     }
 
     .boton.activo {
@@ -391,7 +391,7 @@
       height: 10px;
       overflow: hidden;
       position: relative;
-      
+
     }
 
     .arrow-right {
@@ -584,4 +584,24 @@
     .btn_transparent:hover {
       background: rgb(231, 149, 122);
       color: white;
+    }
+
+    /* Lado izquierdo */
+    #formCita {
+      display: none;
+      margin-top: 20px;
+      border: 1px solid #ebc7bb;
+      padding: 20px;
+      border-radius: 8px;
+      width: 370px;
+      margin-left: 73px;
+    }
+
+    .close {
+      color: #0b0b0b;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: -9px;
     }

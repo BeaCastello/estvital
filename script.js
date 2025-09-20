@@ -91,7 +91,23 @@ const frases = [
     });
 
     // Formulario oculto Workshops
-  document.getElementById("btnCita").addEventListener("click", function () {
-    const form = document.getElementById("formCita");
-    form.style.display = form.style.display === "none" ? "block" : "none";
-  });
+  const modal = document.getElementById("formCita");
+  const btn = document.getElementById("btnCita");
+  const span = document.querySelector(".close");
+
+  // Abrir alerta
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // Cerrar alerta
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Cerrar clickeando fuera
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }

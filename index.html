@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="imagenes/logo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Laura Vázquez</title>
+  <link rel="stylesheet" href="index.css">
+  <script src="script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <header style="display: flex; ">
+    <div class="lado-izquierdo" style="display: flex; flex-direction: column; margin-left: 25px;">
+      <nav class="navbar">
+        <img src="imagenes/logo.png" class="logo"></img>
+        <a href="#" class="menu-link">Inicio</a>
+        <a href="#" class="menu-link">Sobre nosotros</a>
+        <li class="services-Link"><a href="" id="services-Link">Servicios</a>
+          <ul class="submenu" id="submenu">
+            <li class="lista"><a href="#">Entrevista personalizada</a></li>
+            <li class="lista"><a href="#">Seminarios</a></li>
+            <li class="lista"><a href="#">Talleres</a></li>
+
+          </ul>
+        </li>
+        <a href="#" class="menu-link">Contacto</a>
+        <a href="#" class="menu-link">Blog</a>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div class="banner-text">
+        <h1>Laura Vázquez</h1>
+        <p style="width: 90%;"> Especialista en desarrollo personal y profesional con más de 10 años de
+          experiencia acompañando a personas y equipos en procesos de cambio.
+          Mi misión es ayudarte a reconocer tus fortalezas, superar bloqueos y avanzar con seguridad hacia una
+          vida más plena y significativa.
+        </p>
+        <div class="banner-buttons">
+          <a class="btn_banner" href="#training">Más información</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="lado-derecho">
+      <img src="imagenes/fotoLaura4.png" style="width: 420px; margin-left: 20px; margin-right: 20px; ">
+    </div>
+  </header>
+  <div class="curva">
+    <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+      <path d="M0,50 C150,150 350,0 500,100 L500,0 L0,0 Z" style="stroke: none; fill:#f5dcba;"></path>
+    </svg>
+  </div>
+
+
+  <div class="slider">
+    <p id="frase" class="frase">“La vida es muy simple, pero insistimos en hacerla complicada.”</p>
+    <p id="autor" class="autor">— José Ortega y Gasset</p>
+
+    <div class="botones">
+      <!-- Botones dinámicos -->
+    </div>
+  </div>
+
+  <div>
+    <img src="imagenes/curva3.png" style="width: 100%" ; class="imagen-animada">
+  </div>
+
+  <!-- Sobre nosotros -->
+  <div class="aboutme">
+
+    <!-- Lado izquierdo -->
+    <div class="about-left hidden">
+      <p  class= "text-left"> Ayudamos a personas y equipos a superar
+        cualquier desafío brindándoles apoyo emocional y herramientas prácticas para crecer y avanzar con seguridad. Nuestro enfoque combina escucha activa,
+        orientación personalizada y desarrollo de habilidades, de manera que cada individuo aprenda a enfrentar
+        situaciones difíciles y a caminar con confianza por su propio camino.</p>
+    </div>
+
+    <!-- Lado central -->
+    <div class="arrow-right-container">
+      <div class="arrow-right"></div>
+    </div>
+
+    <!-- Lado derecho-->
+    <div class="about-right hidden" style="line-height: 35px;">
+      <p style="margin-bottom: 5px; font-weight: bolder; text-align: justify; width: 500px;">Objetivos principales.</p>
+      <img src="imagenes/señal.png" style="width: 20px" ;> Superación de desafíos personales y profesionales.</br><img
+        src="imagenes/señal.png" style="width: 20px" ;> Mejora en la gestión de emociones y toma de decisiones.
+      </br><img src="imagenes/señal.png" style="width: 20px" ;>Equipos más cohesionados y productivos. </br> <img
+        src="imagenes/señal.png" style="width: 20px" ;>Personas capaces de superar dificultades y avanzar solas con
+      seguridad.</p>
+      <img src="imagenes/señal.png" style="width: 20px" ;> Mayor confianza, motivación y claridad en la toma de decisiones.
+    </div>
+  </div>
+
+  <!-- Services -->
+
+  <div class="content-services" id="services" style="margin-bottom: 40px" ;>
+    <h2 style="font-size: 45px; text-align: center; padding-top: 40px;">Servicios</h2>
+    <div class="container-services">
+      <div class="carousel">
+        <div class="card">
+          <img src="imagenes/19.png" alt="Imagen de Servicio">
+          <div class="description">
+            Un lugar seguro y acogedor, donde podrás expresarte sin miedo a ser juzgada(o), con acompañamiento
+            constante y orientación pensada especialmente para t
+          </div>
+          <h3 style="margin-bottom: 40px;">Entrevistas personalizadas</h3>
+
+        </div>
+        <div class="card">
+          <img src="imagenes/21.png" alt="Service 2">
+          <div class="description">
+            Descubrirás herramientas sencillas y efectivas para superar los desafíos de la vida y reconectar con tu
+            ser espiritual, encontrando en él fortaleza y esperanza.
+          </div>
+          <h3>Seminarios</h3>
+        </div>
+
+        <div class="card">
+          <img src="imagenes/55.png" alt="Service 4">
+          <div class="description">
+            Ofrecemos orientación personalizada y soluciones rápidas para trámites de extranjería, todo a
+            través de una asesoría remota eficiente y accesible.
+          </div>
+          <h3>Talleres</h3>        
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container-workshops">
+    <!-- Lado izquierdo -->
+    <div class="contacto">
+      <img src="imagenes/fotoLaura.jpeg" style="width: 390px; border: 10px solid #ebc7bb; margin-left: 4em;">
+    </div>
+
+   
+
+    <!--Lado derecho -->
+    <div class="faq">
+      <h2 style="font-size: 45px;">Talleres</h2>
+
+      <div class="faq-item">
+        <h3>Bienestar y salud <span>+</span></h3>
+        <p>Un espacio diseñado para potenciar tu salud física y emocional. A través de técnicas prácticas y
+          herramientas efectivas. Porque cuidarte es el primer paso para vivir con plenitud.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Coaching Personal <span>+</span></h3>
+        <p>Te acompañamos a reconocer tus talentos, ganar confianza y tomar decisiones con seguridad. Aprende a
+          transformar tus retos en oportunidades y a crear la vida que deseas.
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Coaching de Vida <span>+</span></h3>
+        <p>Oportunidad para reconectar contigo, ganar seguridad y transformar tus retos en oportunidades. Es el
+          impulso que necesitas para crecer, decidir y avanzar hacia tu mejor versión.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Descubre tu Verdadero Potencial <span>+</span></h3>
+        <p>Es una invitación a conectar con tu esencia, reconocer tus talentos y liberar la mejor versión de ti mismo.
+          Aprende a transformar tus limitaciones en oportunidades y a caminar con seguridad hacia la vida que deseas.
+        </p>
+        </p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Salud Mental<span>+</span></h3>
+        <p>Te invito a detenerte, escucharte y aprender a cuidar de tu equilibrio emocional. Aquí encontrarás apoyo,
+          claridad y herramientas para vivir con mayor paz y confianza.</p>
+      </div>
+      <br></br>
+      <a class="btn_transparent" id="btnCita" > <i class="fa-solid fa-clock"></i> Pide cita</a>
+    </div>
+  </div>
+
+ <!-- FORMULARIO OCULTO -->
+    <div id="formCita" style="display: none; margin-top: 20px; border: 1px solid #ebc7bb; padding: 20px; border-radius: 8px;">
+      <h3>Agenda tu cita</h3>
+      <form>
+        <label for="fecha">Elige el día:</label><br>
+        <input type="date" id="fecha" name="fecha" required style="margin-bottom:10px; width:100%; padding:8px;"><br>
+
+        <label for="hora">Elige la hora:</label><br>
+        <input type="time" id="hora" name="hora" required style="margin-bottom:10px; width:100%; padding:8px;"><br>
+
+        <label for="nombre">Tu nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required style="margin-bottom:10px; width:100%; padding:8px;"><br>
+
+        <label for="email">Tu correo:</label><br>
+        <input type="email" id="email" name="email" required style="margin-bottom:10px; width:100%; padding:8px;"><br>
+
+        <label for="phone">Tu número de teléfono:</label><br>
+        <input type="phone" id="phone" name="phone" required style="margin-bottom:10px; width:100%; padding:8px;"><br>
+
+        <button type="submit" style="background:#ebc7bb; border:none; padding:10px 20px; border-radius:6px; cursor:pointer;">Reservar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+</html>

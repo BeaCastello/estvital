@@ -135,6 +135,5 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// poner año actual Mapa Contacto
-  document.getElementById('year').textContent = new Date().getFullYear();
+
   

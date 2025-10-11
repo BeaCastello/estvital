@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="imagenes/logo.png" type="image/png">
+  <link rel="icon" href="imagenes/logo1.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Laura Vázquez</title>
   <link rel="stylesheet" href="index.css">
@@ -15,20 +15,22 @@
 <body>
   <!-- Header -->
   <header style="display: flex; ">
-    <div class="lado-izquierdo" style="display: flex; flex-direction: column; margin-left: 25px;">
+    <div class="lado-izquierdo" style="display: flex; flex-direction: column; margin-left: 5px;">
       <nav class="navbar">
-        <img src="imagenes/logo.png" class="logo"></img>
-        <a href="#" class="menu-link">Inicio</a>
-        <a href="#" class="menu-link">Sobre nosotros</a>
-        <li class="services-Link"><a href="" id="services-Link">Servicios</a>
-          <ul class="submenu" id="submenu">
-            <li class="lista"><a href="#">Entrevista personalizada</a></li>
-            <li class="lista"><a href="#">Seminarios</a></li>
-            <li class="lista"><a href="#">Talleres</a></li>
+        <img src="imagenes/logo1.png" class="logo"></img>
+        <a href="index.html" class="menu-link">Inicio</a>
+        <a href="#aboutus" class="menu-link">Sobre nosotros</a>
+         <a href="#services" class="menu-link">Servicios</a>
+        <!--  <li class="services-Link"><a href="" id="services-Link">Servicios</a>
+           <ul class="submenu" id="submenu" style="width: 290px; margin-left: 25px;">
+            <li class="lista"><a href="#">Bienestar y Equilibrio Personal</a></li>
+            <li class="lista"><a href="#">Coaching Integral: Personal & Profesional</a></li>
+            <li class="lista"><a href="#">Gestión del Cambio y Comunicación</a></li>
+<li class="lista"><a href="#">Liderazgo y Trabajo Colaborativo</a></li>-->
 
           </ul>
         </li>
-        <a href="#" class="menu-link">Contacto</a>
+        <a href="#contact" class="menu-link">Contacto</a>
         <a href="#" class="menu-link">Blog</a>
 
         <div class="hamburger" id="hamburger">
@@ -46,7 +48,7 @@
           vida más plena y significativa.
         </p>
         <div class="banner-buttons">
-          <a class="btn_banner" href="#training">Más información</a>
+          <a class="btn_banner" href="#contact">Más información</a>
         </div>
       </div>
     </div>
@@ -76,12 +78,13 @@
   </div>
 
   <!-- Sobre nosotros -->
-  <div class="aboutme">
+  <div class="aboutme" id="aboutus">
 
     <!-- Lado izquierdo -->
     <div class="about-left hidden">
-      <p  class= "text-left"> Ayudamos a personas y equipos a superar
-        cualquier desafío brindándoles apoyo emocional y herramientas prácticas para crecer y avanzar con seguridad. Nuestro enfoque combina escucha activa,
+      <p class="text-left"> Ayudamos a personas y equipos a superar
+        cualquier desafío brindándoles apoyo emocional y herramientas prácticas para crecer y avanzar con seguridad.
+        Nuestro enfoque combina escucha activa,
         orientación personalizada y desarrollo de habilidades, de manera que cada individuo aprenda a enfrentar
         situaciones difíciles y a caminar con confianza por su propio camino.</p>
     </div>
@@ -99,7 +102,8 @@
       </br><img src="imagenes/señal.png" style="width: 20px" ;>Equipos más cohesionados y productivos. </br> <img
         src="imagenes/señal.png" style="width: 20px" ;>Personas capaces de superar dificultades y avanzar solas con
       seguridad.</p>
-      <img src="imagenes/señal.png" style="width: 20px" ;> Mayor confianza, motivación y claridad en la toma de decisiones.
+      <img src="imagenes/señal.png" style="width: 20px" ;> Mayor confianza, motivación y claridad en la toma de
+      decisiones.
     </div>
   </div>
 
@@ -112,28 +116,39 @@
         <div class="card">
           <img src="imagenes/19.png" alt="Imagen de Servicio">
           <div class="description">
-            Un lugar seguro y acogedor, donde podrás expresarte sin miedo a ser juzgada(o), con acompañamiento
-            constante y orientación pensada especialmente para t
+            Un espacio para reconectar contigo, cuidar de tu energía y encontrar bienestar en cada aspecto de tu vida.
+            Recupera tu equilibrio interior.
           </div>
-          <h3 style="margin-bottom: 40px;">Entrevistas personalizadas</h3>
-
-        </div>
-        <div class="card">
-          <img src="imagenes/21.png" alt="Service 2">
-          <div class="description">
-            Descubrirás herramientas sencillas y efectivas para superar los desafíos de la vida y reconectar con tu
-            ser espiritual, encontrando en él fortaleza y esperanza.
-          </div>
-          <h3>Seminarios</h3>
+          <h3 style="margin-bottom: 40px;">Bienestar y Equilibrio Personal</h3>
         </div>
 
         <div class="card">
-          <img src="imagenes/55.png" alt="Service 4">
+          <img src="imagenes/23.png" alt="Service 4">
           <div class="description">
-            Ofrecemos orientación personalizada y soluciones rápidas para trámites de extranjería, todo a
-            través de una asesoría remota eficiente y accesible.
+            Acompañamiento integral para tu crecimiento personal y profesional.
+            Descubre tu propósito, potencia tus talentos y alcanza tus metas con equilibrio y bienestar.
           </div>
-          <h3>Talleres</h3>        
+          <h3 style="padding: 0px 10px 0px 10px;">Coaching Integral: Personal & Profesional</h3>
+        </div>
+
+        <div class="card">
+          <img src="imagenes/22.png" alt="Service 2">
+          <div class="description">
+            En un mundo que cambia constantemente, la clave está en cómo nos comunicamos y nos adaptamos. Te acompaño a
+            desarrollar una comunicación más consciente, empática y efectiva, para gestionar el cambio desde la
+            confianza y el equilibrio.
+          </div>
+          <h3>Gestión del Cambio y Comunicación</h3>
+        </div>
+
+        <div class="card">
+          <img src="imagenes/24.png" alt="Service 4">
+          <div class="description">
+            Porque los grandes logros nacen del trabajo en equipo. Despierta tu liderazgo interior, fomenta la
+            cooperación y crea entornos donde las ideas fluyan, las personas se motiven y los objetivos se alcancen
+            juntos.
+          </div>
+          <h3>Liderazgo y Trabajo Colaborativo</h3>
         </div>
 
       </div>
@@ -143,11 +158,10 @@
 
   <div class="container-workshops">
     <!-- Lado izquierdo -->
-    <div class="contacto">
-      <img src="imagenes/fotoLaura.jpeg" style="width: 390px; border: 10px solid #ebc7bb; margin-left: 4em;">
-    </div>
 
-   
+    <div class="lado-izquierdo-wrapper">
+      <img src="imagenes/fotoLaura.jpeg" alt="Foto" class="lado-izquierdo container-imgWorkshops">
+    </div>
 
     <!--Lado derecho -->
     <div class="faq">
@@ -186,37 +200,83 @@
           claridad y herramientas para vivir con mayor paz y confianza.</p>
       </div>
       <br></br>
-      <a class="btn_transparent" id="btnCita" > <i class="fa-solid fa-clock"></i> Pide cita</a>
+
+      <div style="display: flex;">
+        <a href="agendaCita.html" class="btn_transparent" id="btnCita" target="_blank"> <i
+            class="fa-solid fa-clock"></i> Pide cita</a>
+      </div>
     </div>
   </div>
 
- <!-- FORMULARIO OCULTO -->
-    <div id="formCita" style="display: none; margin-top: 20px; border: 1px solid #ebc7bb; padding: 20px; border-radius: 8px;">
-      <span class="close">&times;</span>
-      <h3 style="margin-bottom: 20px;">Agenda tu cita</h3>
-      <form>
-        <label for="fecha">Elige el día:</label><br>
-        <input type="date" id="fecha" name="fecha" required style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
+  <!-- Contacto -->
 
-        <label for="hora" >Elige la hora:</label><br>
-        <input type="time" id="hora" name="hora" required style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
+  <section class="contact-section" aria-label="Sección de contacto" id="contact">
+    <!-- IZQUIERDA -->
+    <div class="contact-left">
+      <h2>Contacto</h2>
+      <div class="contact-info" aria-hidden="false">
+        <div class="contact-line">
+          <i class="fa-solid fa-location-dot"> </i> <a href="https://maps.app.goo.gl/kGyket6hLUJgbz4z9"
+            style="margin-right: 10px;"> Barcelona. España</a>
+          <i class="fa-solid fa-phone"></i> <a href="tel: +34 642 64 35 99" style="margin-right: 10px;"> +34 642 64 35
+            99</a>
+          <i class="fa-solid fa-envelope"></i><a href="mailto: admin@estvital.com" style="margin-right: 10px;">
+            admin@estvital.com</a>
+        </div></a>
+      </div>
 
-        <label for="nombre">Tu nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" required style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
+      <div class="map-wrap" aria-hidden="false">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88796.66077595625!2d2.0576163180956333!3d41.39263843524653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49816718e30e5%3A0x44b0fb3d4f47660a!2sBarcelona!5e1!3m2!1ses!2ses!4v1760166308616!5m2!1ses!2ses"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
 
-        <label for="email">Tu correo:</label><br>
-        <input type="email" id="email" name="email" required style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
-
-        <label for="phone">Tu número de teléfono:</label><br>
-        <input type="phone" id="phone" name="phone" required style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
-
-        <button type="submit" style="background:#ebc7bb; border:none; padding:10px 20px; border-radius:6px; cursor:pointer;">Reservar</button>
-      </form>
+      <div class="redes-sociales">
+        <a href="#">Instagram</a> |
+        <a href="#">Facebook</a> |
+        <a href="#">LinkedIn</a>
+         <p style="margin-top: 10px;">© 2025 Estvital. Todos los derechos reservados.</p>
+      </div>
     </div>
-  </div>
-</div>
 
+    <!-- Formulario Contacto-->
+    <aside class="contact-right" aria-label="Formulario de contacto">
+      <div>
+        <p style="font-size: 25px; font-weight: bolder; margin-bottom: 10px;"> Cuenta con nosotros</p>
+        <p class="right-intro"> Si te surge alguna duda antes de la consulta, escríbenos y te responderemos en breve.
+        </p>
 
+        <form class="contact-form" action="#" method="post" novalidate>
+          <div>
+            <label for="nombre" style="margin-top: 5px;">Nombre:</label>
+            <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre">
+          </div>
+
+          <div>
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" required placeholder="Tu correo">
+          </div>
+
+          <div>
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
+          </div>
+
+          <div class="privacy">
+            <input id="priv" name="priv" type="checkbox" required>
+            <label for="priv" style="margin:0;font-size:13px;">He leído y acepto la <a href="#"
+                style="color:rgba(87, 23, 235, 0.95); text-decoration:underline;">política de privacidad</a></label>
+          </div>
+
+          <div class="btn-wrap">
+            <button class="btn-submit" type="submit">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+  </section>
+   
 </body>
 
 </html>

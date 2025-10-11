@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagenes/logo1.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Laura Vázquez</title>
+    <link rel="stylesheet" href="agendaCita.css">
+    <script src="agendaCita.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div style="display: flex;">
+        <div class="lado-izquierdo">
+            <img src="imagenes/fotoLaura6.png" style="width: 460px; margin-top: 25px; ">
+        </div>
+
+        <div style="display: flex;">
+            <div class="lado-derecho" style="display: flex; flex-direction: column; margin-left: 25px;">
+
+                <nav class="navbar">
+                    <img src="imagenes/logo1.png" class="logo"
+                        style="width: 120px; margin-left: -9em; margin-top: 57px;"></img>
+                    <a href="index.html" class="menu-link" style="margin-left: 30px;">Inicio</a>
+                    <a href="#" class="menu-link">Sobre nosotros</a>
+                    <li class="services-Link"><a href="" id="services-Link">Servicios</a>
+                        <ul class="submenu" id="submenu">
+                            <li class="lista"><a href="#">Entrevista personalizada</a></li>
+                            <li class="lista"><a href="#">Seminarios</a></li>
+                            <li class="lista"><a href="#">Talleres</a></li>
+
+                        </ul>
+                    </li>
+                    <a href="#" class="menu-link">Contacto</a>
+                    <a href="#" class="menu-link">Blog</a>
+                    <div style="font-size: 22px; display: flex; margin-left: 10em;">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook" style="margin-right: 15px;"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter" style="margin-right: 15px; "></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram" style="margin-right: 15px; "></i></a>
+                    </div>
+                    <div class="hamburger" id="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </nav>
+
+                <div class="banner-text">
+                    <h1>Laura Vázquez</h1>
+                    <p style="width: 90%; margin-top: 15px; margin-bottom: 10px; font-size: 18px;"> A veces solo necesitamos una guía
+                        para recordar todo lo que somos capaces de hacer.</p>
+                    <p style="width: 90%; margin-top: 15px; margin-bottom: 10px; font-size: 18px;"> Te ayudo a reconectarte contigo, a
+                        potenciar tu confianza y a dar los pasos que necesitas para
+                        crecer, tanto en tu vida personal como en tu carrera.</p>
+                    <p style="width: 90%; margin-top: 15px; margin-bottom: 10px; font-size: 18px;"> El cambio empieza por ti, pero no
+                        tienes que hacerlo sola/o.</p>
+
+                    <h3 style="padding: 10px 0px 20px 0px; font-size: 24px;">Agenda tu cita</h3>
+
+                    <div>
+                        <form class="formulario">
+                            <div class="campo">
+                                <label for="fecha">Elige el día:</label>
+                                <input type="date" id="fecha" name="fecha" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="hora">Elige la hora:</label>
+                                <input type="time" id="hora" name="hora" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="email">Correo electrónico:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="phone">Número de teléfono:</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+
+                            <div class="campo boton">
+                                <button type="submit">Reservar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="curva">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+            <path d="M0,50 C150,150 350,0 500,100 L500,0 L0,0 Z" style="stroke:none; fill:rgb(248, 248, 248);"></path>
+        </svg>
+
+        <footer class="footer">
+            <p>© 2025 Estvital. Todos los derechos reservados.</p>
+            <div class="sociales">
+                <a href="#">Instagram</a> |
+                <a href="#">Facebook</a> |
+                <a href="#">LinkedIn</a>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div style="display: flex;">
+        <div class="lado-izquierdo">
+            <img src="imagenes/fotoLaura2.png" style="width: 350px;">
+        </div>
+
+        <div class="lado-derecho">
+            <nav class="navbar">
+                <a href="index.html" class="menu-link">Inicio</a>
+                <a href="#" class="menu-link">Sobre nosotros</a>
+                <li class="services-Link"><a href="" id="services-Link">Servicios</a>
+                    <ul class="submenu" id="submenu">
+                        <li class="lista"><a href="#">Entrevista personalizada</a></li>
+                        <li class="lista"><a href="#">Seminarios</a></li>
+                        <li class="lista"><a href="#">Talleres</a></li>
+                    </ul>
+                </li>
+                <a href="#" class="menu-link">Contacto</a>
+                <a href="#" class="menu-link">Blog</a>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+     Agenda Cita 
+        <div style="margin-top: 30px; width: 250px; display: flex; flex-direction: column;">
+            <h3 style="margin-bottom: 20px;">Agenda tu cita</h3>
+            <form>
+                <label for="fecha">Elige el día:</label><br>
+                <input type="date" id="fecha" name="fecha" required
+                    style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
+
+                <label for="hora">Elige la hora:</label><br>
+                <input type="time" id="hora" name="hora" required
+                    style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
+
+                <label for="nombre">Tu nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required
+                    style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
+
+                <label for="email">Tu correo:</label><br>
+                <input type="email" id="email" name="email" required
+                    style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
+
+                <label for="phone">Tu número de teléfono:</label><br>
+                <input type="phone" id="phone" name="phone" required
+                    style="margin-bottom:10px; width:100%; padding:8px; margin-bottom: 20px;margin-top: 5px;"><br>
+
+                <button type="submit"
+                    style="background:#ebc7bb; border:none; padding:10px 20px; border-radius:6px; cursor:pointer;">Reservar</button>
+            </form>
+        </div>
+    </div>
+    </div>-->
+
+
+
+
+
+
+</body>
+
+</html>

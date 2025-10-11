@@ -23,11 +23,11 @@
     .navbar {
       display: flex;
       align-items: center;
-      margin-top: 30px;
+      margin-top: 10px;
     }
 
     .logo {
-      width: 100px;
+      width: 150px;
       margin-left: 15px;
       margin-right: 15px;
 
@@ -61,14 +61,15 @@
     }
 
     .submenu {
-      font-size: 14px;
+      
       display: none;
       position: absolute;
-      background-color: #1f272e;
+      background-color:rgb(231, 149, 122);
       list-style: none;
-      padding: 10px;
+      padding: 5px;
       border-radius: 5px;
-      width: 210px;
+    
+      
     }
 
     .services-Link a {
@@ -81,6 +82,8 @@
 
     li.services-Link {
       list-style-type: none;
+      
+
     }
 
     .services-Link:hover .submenu {
@@ -93,6 +96,13 @@
       color: white;
       line-height: 22px;
     }
+    .submenu li a{
+      padding: 5px 0px 0px 10px;
+      color: white;
+      line-height: 25px;
+      font-size: 17px;
+    }
+
 
     @media (max-width: 768px) {
       li {
@@ -106,7 +116,7 @@
         list-style: none;
         padding: 10px;
         border-radius: 5px;
-        width: 170px;
+       
       }
 
       ul {
@@ -446,7 +456,7 @@
       text-align: center;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease;
-      width: 320px;
+      width: 280px;
 
     }
 
@@ -516,6 +526,33 @@
     }
 
     /* Workshops */
+    .lado-izquierdo {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  /* Por defecto no reproducimos la animación hasta que se añada la clase 'play' */
+}
+
+/* Clase que dispara la animación (se añade/quita desde JS) */
+.lado-izquierdo.play {
+  animation: slideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-120px) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Estilos opcionales para el wrapper */
+.lado-izquierdo-wrapper {
+  overflow: visible;
+}
+
 
 
     .container-workshops {
@@ -527,14 +564,18 @@
 
     /* Lado derecho */
     .faq {
-      flex: 2;
+      display: flex;
+      flex-direction: column;
       padding: 0px 5rem 0px 5rem;
+      margin-left: 25em;
+      width: 61em;
 
     }
 
     .faq h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      margin-top: -10px;
     }
 
     .faq-item {
@@ -579,6 +620,7 @@
       border-radius: 40px;
       cursor: pointer;
       transition: background 0.3s ease;
+      height: 50px;
     }
 
     .btn_transparent:hover {
@@ -589,7 +631,6 @@
     /* Lado izquierdo */
     #formCita {
       display: none;
-      margin-top: 20px;
       border: 1px solid #ebc7bb;
       padding: 20px;
       border-radius: 8px;
@@ -605,3 +646,199 @@
       cursor: pointer;
       margin-top: -9px;
     }
+
+    .container-imgWorkshops {
+      width: 390px;
+      border: 10px solid #ebc7bb;
+      margin-left: 2em;
+      overflow: hidden;
+      position: relative;
+
+    }
+
+    .container-imgWorkshops {
+      position: absolute;
+      left: 0;
+
+    }
+
+    @keyframes slideRight {
+      0% {
+        transform: translateX(0);
+
+      }
+
+      100% {
+        transform: translateX(calc(20% - 100px));
+
+      }
+    }
+
+/* Contacto */
+    .contact-section{
+    max-width: var(--container-width);
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 0;
+    box-shadow: 0 6px 30px rgba(0,0,0,0.06);
+    overflow: hidden;
+    border-radius: 6px;
+    
+  }
+
+  /* Lado izquierdo */
+  .contact-left{
+    background: var(--lavanda);
+    padding: 48px 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .contact-left h2{
+    margin: 0 0 6px 0;
+    font-size: 36px;
+    color: #0b0b0b;
+    font-weight: 700;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.04);
+  }
+
+  .contact-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #fff;
+    font-size: 18px;
+    color: #0b0b0b;
+  }
+
+  .contact-line{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color: #fff;
+    opacity: 0.95;
+    color: #0b0b0b;
+  }
+
+    .contact-line a{
+    color:black;
+    text-decoration: none;    
+  }
+  .redes-sociales a{
+    color:#0b0b0b;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+.redes-sociales a:hover{
+    color:rgb(192, 57, 45);
+    text-decoration: none;
+    margin-top: 20px;
+  }
+
+  /* Mapa */
+  .map-wrap{
+    margin-top: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  }
+  .map-wrap iframe{
+    display:block;
+    width:100%;
+    height:240px;
+    border:0;
+  }
+
+  /* Lado derecho (formulario) */
+  .contact-right{
+    background: rgb(245, 203, 203);
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .right-intro{
+    color: black;
+    font-size: 17px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+    opacity: 0.95;
+    text-align: justify;
+  }
+
+  form.contact-form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-form label{
+    font-size: 13px;
+    color:black;
+    margin-bottom: 6px;
+    display:block;
+    font-weight: bolder;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea,
+  .contact-form input[type="tel"]{
+    width:100%;
+    padding:10px 12px;
+    border-radius:6px;
+    border: 1px solid rgba(0,0,0,0.08);
+    font-size:14px;
+    outline:none;
+  }
+  .contact-form textarea{
+    min-height:120px;
+    resize: vertical;
+  }
+
+  .privacy{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:13px;    
+    margin-top:6px;
+  }
+  .privacy input{ width:16px; height:16px; }
+
+  /* Botón centrado */
+  .btn-wrap{
+    display:flex;
+    justify-content:center;
+    margin-top:8px;
+  }
+  .btn-submit{
+    background: var(--white);
+    color: var(--text-dark);
+    border: none;
+    padding: 10px 22px;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:700;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-submit:hover{ transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.12); }
+  .btn-submit:active{ transform: translateY(0); }
+
+  /* Pequeños ajustes visuales */
+  .contact-left small{ color: rgba(255,255,255,0.95); display:block; margin-top:4px; font-weight:600; }
+
+  /* Responsivo */
+  @media (max-width: 980px){
+    .contact-section{ grid-template-columns: 1fr; }
+    .contact-right{ order: 2; padding: 24px; }
+    .contact-left{ order: 1; padding: 28px; }
+    .map-wrap iframe{ height:200px; }
+  }
+
+  @media (max-width: 420px){
+    .contact-left h2{ font-size:28px; }
+  }

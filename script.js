@@ -69,7 +69,7 @@ const frases = [
           entry.target.classList.add('show-right');
         }
       } else {
-        // 🔁 Quita la animación cuando sale de la vista
+       
         entry.target.classList.remove('show-left', 'show-right');
       }
     });
@@ -90,24 +90,51 @@ const frases = [
       });
     });
 
-    // Formulario oculto Workshops
-  const modal = document.getElementById("formCita");
-  const btn = document.getElementById("btnCita");
-  const span = document.querySelector(".close");
+   //Workshops Imagen Animación
 
-  // Abrir alerta
-  btn.onclick = function() {
-    modal.style.display = "block";
-  }
+document.addEventListener('DOMContentLoaded', () => {
+  const el = document.querySelector('.container-imgWorkshops');
+  if (!el) return;
 
-  // Cerrar alerta
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
+  const options = {
+    root: null,
+    rootMargin: '0px 0px -10% 0px', 
+    threshold: 0.1
+  };
 
-  // Cerrar clickeando fuera
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
+  const restartAnimation = (element) => {   
+    element.classList.remove('play');   
+    void element.offsetWidth;
+    element.classList.add('play');
+  };
+
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {          
+          restartAnimation(entry.target);
+        } else {          
+          entry.target.classList.remove('play');
+        }
+      });
+    }, options);
+
+    obs.observe(el);
+  } else {
+        const check = () => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
+        restartAnimation(el);
+      } else {
+        el.classList.remove('play');
+      }
+    };
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+    check();
   }
+});
+
+// poner año actual Mapa Contacto
+  document.getElementById('year').textContent = new Date().getFullYear();
+  

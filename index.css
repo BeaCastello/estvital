@@ -161,6 +161,12 @@
       justify-content: left;
     }
 
+    .fotoLaura {
+      width: 420px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -214,6 +220,22 @@
     @media (max-width: 480px) {
       .logo {
         margin: 0px;
+      }
+
+      .menu-toggle {
+        margin-left: 5em;
+      }
+
+      .navbar {
+        margin-top: 20px;
+      }
+
+      .menu.show {
+        margin-top: 20px;
+      }
+
+      .fotoLaura {
+        width: 320px;
       }
     }
 
@@ -305,6 +327,25 @@
       }
     }
 
+    @media (max-width: 480px) {
+      .banner-text {
+        padding: 0px;
+      }
+
+      .banner-text p {
+        font-size: 1.2rem;
+        margin: 0px;
+        width: 340px;
+        margin-left: 10px;
+        margin-bottom: 20px;
+      }
+
+      .banner-text {
+        gap: 1rem;
+      }
+    }
+
+    /* Curva container */
 
     .curva {
       position: relative;
@@ -367,11 +408,28 @@
       background: #333;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 480px) {
+      .curva {
+        margin-top: -10px;
+      }
+
+      .slider {
+        margin-top: -8em;
+      }
+
       .frase {
-        font-size: 1.3rem;
+        margin-top: -10px;
+      }
+
+      .aboutme {
+        flex-direction: column;
+      }
+
+      .botones {
+        padding-bottom: 25px;
       }
     }
+
 
     /*  Estilos Aboutme  */
     .aboutme {
@@ -460,7 +518,6 @@
       line-height: 35px;
     }
 
-
     /* animación de izquierda a derecha */
     @keyframes slideRight {
       0% {
@@ -494,6 +551,20 @@
         margin-top: -50px;
       }
     }
+
+    @media (max-width: 480px) {
+      .text-left {
+        width: 300px;
+        margin-left: 0px;
+      }
+
+      #text-rightAbout {
+        width: 300px;
+        margin-top: 0px;
+        margin-left: 8px;
+      }
+    }
+
 
     /*  Estilos Servicios  */
     .content-services {
@@ -593,6 +664,17 @@
 
       .card img {
         margin-left: 13px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .carousel {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .card h3 {
+        margin-bottom: 40px;
       }
     }
 
@@ -698,39 +780,6 @@
       color: white;
     }
 
-    /* Lado izquierdo
-    #formCita {
-      display: none;
-      border: 1px solid #ebc7bb;
-      padding: 20px;
-      border-radius: 8px;
-      width: 370px;
-      margin-left: 73px;
-    }
-
-    .close {
-      color: #0b0b0b;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: -9px;
-    }
-
-    .container-imgWorkshops {
-      width: 390px;
-      border: 10px solid #ebc7bb;
-      margin-left: 2em;
-      overflow: hidden;
-      position: relative;
-
-    }
-
-    .container-imgWorkshops {
-      position: absolute;
-      left: 0;
-
-    } */
 
     @keyframes slideRight {
       0% {
@@ -755,11 +804,27 @@
       .lado-izquierdoImg {
         width: 300px;
         margin-top: 40px;
-        margin-left: 30px;
+       
       }
 
     }
 
+    @media (max-width: 480px) {
+      .container-workshops {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .faq {
+        width: 19em;
+      }
+
+      .faq-item.active p,
+      .faq-item.active ul {
+        line-height: 1.9;
+        text-align: justify;
+      }
+          }
 
     /* Contacto */
     .contact-section {
@@ -938,6 +1003,10 @@
       margin-top: 4px;
       font-weight: 600;
     }
+    .privacy label{
+      margin:0;
+      font-size:15px;
+    }
 
     /* Responsivo */
     @media (max-width: 980px) {
@@ -967,15 +1036,38 @@
       }
     }
 
-    @media (max-width: 420px) {
+    @media (max-width: 480px) {
+      .contact-section {
+        display: flex;
+        flex-direction: column;
+      }
+
       .contact-left h2 {
         font-size: 28px;
+        text-align: center;
+      }
+      .contact-line{
+        display: flex;
+        flex-direction: column;
+        font-size: 20px
       }
 
       .contact-right {
         display: flex;
         flex-direction: column;
         justify-self: center;
-        width: 550px;
+        width: 350px;
+        margin-left: 12px;
       }
+
+      .contact-left {
+        order: 1;
+        padding: 18px;
+      }
+      .fa-solid, .fas{
+        font-size: 20px;
+      }
+      .contact-form label {
+    font-size: 15px;
     }
+      }

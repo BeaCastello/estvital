@@ -1,14 +1,13 @@
-function toggleMenu() {
-    const navLinks = document.getElementById('nav-links');
-    navLinks.classList.toggle('show');
-}
 
-document.addEventListener('click', (e) => {
-    const menuHamburguesa = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("menu");
 
+    toggle.addEventListener("click", function () {
+      menu.classList.toggle("show");
     });
-
+  });
+    
     // Slider
 const frases = [
       {
@@ -135,5 +134,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-
-  

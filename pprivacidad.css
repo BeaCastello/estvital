@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  background-color: rgb(248, 248, 248);
+  color: #222;
+  line-height: 1.4;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background: rgb(231, 149, 122);
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+}
+
+.encabezado {
+  display: flex;
+}
+
+#localizador {
+  color: #0808088f;
+  padding: 0px 10px 0px 40px;
+  font-size: 14px;
+  margin-top: 7px;
+
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  margin-top: 3px;
+}
+
+#redes {
+  color: #0808088f;
+  padding: 0px 0px 0px 10px;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.redes-sociales {
+  margin-left: 30em;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .redes-sociales {
+    margin-left: 6em;
+  }
+
+}
+
+
+/* --- Barra de navegación --- */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+/* --- Menú hamburguesa --- */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    background-color: rgb(231, 149, 122);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 200px;
+    z-index: 100;
+  }
+
+  .menu a {
+    padding: 10px 0;
+    text-align: right;
+    border-bottom: 1px solid #080808;
+  }
+
+  .menu-toggle {
+    display: block;
+    color: black;
+    margin-right: 20px;
+    font-size: 30px;
+    margin-left: 20em;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .navbar {
+    margin-top: 5px;
+  }
+
+}
+
+.logo {
+  width: 90px;
+  margin-left: 15px;
+}
+
+.menu-link {
+  display: flex;
+  padding-left: 12px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: rgb(119, 64, 57);
+}
+
+.menu-link:hover {
+  color: #252525;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #333;
+  margin: 4px 0;
+  border-radius: 5px;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: rgb(231, 149, 122);
+  list-style: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.services-Link a {
+  display: flex;
+  padding-left: 22px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: rgb(119, 64, 57);
+}
+
+li.services-Link {
+  list-style-type: none;
+}
+
+.services-Link:hover .submenu {
+  display: block;
+  width: 210px;
+}
+
+.submenu li {
+  padding: 5px 0px 0px 10px;
+  color: white;
+  line-height: 22px;
+}
+
+.submenu li a {
+  padding: 5px 0px 0px 10px;
+  color: white;
+  line-height: 25px;
+  font-size: 17px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: left;
+}
+
+.container p {
+  font-size: 18px;
+}
+
+.container {
+  font-size: 25px;
+  color: rgb(71, 71, 71);
+  padding: 40px;
+  text-align: justify;
+  line-height: 35px;
+  font-size: 18px;
+}
+.textP{
+color: rgb(235, 21, 21); 
+font-size: 40px; 
+text-align: center
+}
+
+
+@media (max-width: 480px) {
+  .encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+.redes-sociales {
+        margin-left: 0em;
+    }
+    .menu-toggle{
+      margin-left: 7em;
+    }
+    .menu{
+      top: 240px;
+    }
+    header{
+      display: flex;
+      justify-content: center;
+      line-height: 25px;
+    }
+    .textP{
+      margin-top: 20px;
+    }
+}
+
+/* Footer dentro de la curva */
+.footer {
+  text-align: center;
+  position: relative;
+  background-color: #f5dcba;
+}
+
+.p-footer {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444;
+  padding-top: 20px;
+}
+
+.footer .sociales {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.footer .sociales a {
+  color: #444;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer .sociales a:hover {
+  color: #b28b62;
+}

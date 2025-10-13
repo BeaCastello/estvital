@@ -15,91 +15,90 @@
 <body>
 
     <!-- Header -->
-    <div style="display: flex;">
+         <div class="container">
         <div class="lado-izquierdo">
-            <img src="imagenes/fotoLaura7.png" style="width: 480px; margin-top: 5px; ">
+            <img src="imagenes/fotoLaura9.png" class="portadaImg">
         </div>
 
-        <div style="display: flex;">
-            <div class="lado-derecho" style="display: flex; flex-direction: column; margin-left: 25px;">
-
-                <nav class="navbar">
-                    
-                    <a href="index.html" class="menu-link" style="margin-left: 40px;">Inicio</a>
+        <div class="lado-derecho" style="display: flex; flex-direction: column; margin-left: 25px;">
+            <nav class="navbar">
+                <div class="menu-toggle" id="menu-toggle">☰</div>
+                <div class="menu" id="menu">
+                    <a href="index.html" class="menu-link" id="inicio">Inicio</a>
                     <a href="#aboutus" class="menu-link">Sobre nosotros</a>
                     <a href="#services" class="menu-link">Servicios</a>
                     <a href="#" class="menu-link">Contacto</a>
                     <a href="#" class="menu-link">Blog</a>
-                    <div style="font-size: 22px; display: flex; margin-left: 5em;">
+                    <div class="redes">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"
                                 style="margin-right: 15px;"></i></a>
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter" style="margin-right: 15px; "></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"
                                 style="margin-right: 15px; "></i></a>
                     </div>
-                    <div class="hamburger" id="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </nav>
+                </div>
+            </nav>
 
-                <div class="banner-text">
-                    <h1>Laura Vázquez</h1>
-                    <p style="width: 90%; margin-top: 15px; margin-bottom: 10px; font-size: 18px;"> A veces solo
-                        necesitamos una guía
-                        para recordar todo lo que somos capaces de hacer.</p>
-                    <p style="width: 90%; margin-top: 15px; margin-bottom: 10px; font-size: 18px;"> Te ayudo a
-                        reconectarte contigo, a
-                        potenciar tu confianza y a dar los pasos que necesitas para
-                        crecer, tanto en tu vida personal como en tu carrera.</p>
-                    <p style="width: 90%; margin-top: 15px; margin-bottom: 10px; font-size: 18px;"> El cambio empieza
-                        por ti, pero no
-                        tienes que hacerlo sola/o.</p>
+            <div class="banner-text">
+                <h1>Laura Vázquez</h1>
+                <p style="width: 90%; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"> A veces solo
+                    necesitamos una guía
+                    para recordar todo lo que somos capaces de hacer.</p>
+                <p style="width: 90%; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"> Te ayudo a
+                    reconectarte contigo, a
+                    potenciar tu confianza y a dar los pasos que necesitas para
+                    crecer, tanto en tu vida personal como en tu carrera.</p>
+                <p style="width: 90%; margin-top: 10px; margin-bottom: 10px; font-size: 18px;"> El cambio empieza
+                    por ti, pero no
+                    tienes que hacerlo sola/o.</p>
 
-                    <h3 style="padding: 10px 0px 20px 0px; font-size: 24px;">Agenda tu cita</h3>
+                <h3 style="padding: 7px 0px 20px 0px; font-size: 22px;">Agenda tu cita</h3>
 
-                    <div>
-                        <form class="formulario">
-                            <div class="campo">
-                                <label for="fecha">Elige el día:</label>
-                                <input type="date" id="fecha" name="fecha" required>
-                            </div>
+                <div>
+                    <form class="formulario">
+                        <div class="campo">
+                            <label for="fecha">Elige el día:</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
 
-                            <div class="campo">
-                                <label for="hora">Elige la hora:</label>
-                                <input type="time" id="hora" name="hora" required>
-                            </div>
+                        <div class="campo">
+                            <label for="hora">Elige la hora:</label>
+                            <input type="time" id="hora" name="hora" required>
+                        </div>
 
-                            <div class="campo">
-                                <label for="nombre">Nombre:</label>
-                                <input type="text" id="nombre" name="nombre" required>
-                            </div>
+                        <div class="campo">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
 
-                            <div class="campo">
-                                <label for="email">Correo electrónico:</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
+                        <div class="campo">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
 
-                            <div class="campo">
-                                <label for="phone">Número de teléfono:</label>
-                                <input type="tel" id="phone" name="phone" required>
-                            </div>
+                        <div class="campo">
+                            <label for="phone">Número de teléfono:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
 
-                            <div class="campo boton">
-                                <button type="submit">Reservar</button>
-                            </div>
-                        </form>
-                    </div>
+                        <div class="campo boton">
+                            <button type="submit">Reservar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 
 
+
+
+
+
     <div class="curva">
         <svg viewBox="0 0 500 150" preserveAspectRatio="none">
-            <path d="M0,50 C150,150 350,0 500,100 L500,0 L0,0 Z" style="stroke:none; fill:rgb(248, 248, 248);"></path>
+            <path d="M0,50 C150,150 350,0 500,100 L500,0 L0,0 Z" style="stroke:none; fill:rgb(248, 248, 248);">
+            </path>
         </svg>
 
         <footer class="footer">
@@ -111,6 +110,7 @@
             </div>
         </footer>
     </div>
+    
 
 
 

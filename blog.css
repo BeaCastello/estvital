@@ -189,12 +189,12 @@ a {
 .menu {
   display: flex;
   align-items: center;
-   margin-top: 3px;
-   gap: 20px;
-   background-color: rgb(250, 238, 239);
+  margin-top: 3px;
+  gap: 20px;
+  background-color: rgb(250, 238, 239);
 }
 
-.menu-link a{
+.menu-link a {
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -202,13 +202,14 @@ a {
   font-weight: 200;
   font-size: 14px;
 }
-.menu-link{
+
+.menu-link {
   display: flex;
   flex-direction: column;
 }
 
 /* --- Responsivo --- */
-@media (max-width: 768px) {  
+@media (max-width: 768px) {
 
   .menu a {
     padding: 10px 0;
@@ -255,4 +256,215 @@ a {
   .fotoLaura {
     width: 320px;
   }
+}
+
+/* --- Container--- */
+.container {
+  display: flex;
+
+}
+
+.hold-title {
+  display: flex;
+  color: black;
+  font-size: 32px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.container {
+  display: flex;
+  margin-top: 40px;
+  gap: 40px;
+}
+
+.left-section {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.roots-title {
+  margin-bottom: 20px;
+}
+
+.roots-title1 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.roots-description {
+  text-align: justify;
+  width: 93%;
+  line-height: 25px;
+}
+
+.center-section {
+  flex: 2;
+  margin-left: 30px;
+}
+
+.right-section {
+  margin-right: 57px;
+  flex: 1;
+  margin-left: 30px;
+}
+
+.main-image {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  margin: 0 20px;
+}
+
+.image-card img {
+  width: 275px;
+  border-radius: 8px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.image-card p {
+  margin-top: 15px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.vertical-line {
+  width: 2px;
+  height: 100%;
+  background-color: #000;
+  margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .vertical-line {
+    width: 2px;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+  }
+
+  .image-card img {
+    width: 200px;
+    height: 120px;
+  }
+
+  .image-card {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .left-section {
+    flex: 1;
+  }
+
+  .right-section {
+    margin-right: 40px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .image-card p {
+    margin-bottom: 30px;
+  }
+}
+
+/* Estilo Whatsapp */
+.whatsapp-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+  z-index: 1000;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  background-color: #25d366;
+  padding: 10px;
+  border-radius: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+/* Icono de WhatsApp */
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Texto emergente */
+.whatsapp-text {
+  margin-left: 10px;
+  margin-right: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+/* Mostrar texto emergente al hacer hover */
+.whatsapp-button:hover .whatsapp-text {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Mostrar el botón cuando es visible */
+.whatsapp-container.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-10px);
+  transition: opacity 0.3s, transform 0.5s;
+}
+
+/* Footer dentro de la curva */
+.footer {
+  text-align: center;
+  position: relative;
+  background-color: #f5dcba;
+}
+
+.p-footer {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #444;
+  padding-top: 20px;
+}
+
+.footer .sociales {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.footer .sociales a {
+  color: #444;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer .sociales a:hover {
+  color: #b28b62;
 }

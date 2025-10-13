@@ -359,3 +359,70 @@ li.services-Link {
 .footer .sociales a:hover {
     color: #b28b62;
 }
+/* Estilo Whatsapp */
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+/* Icono de WhatsApp */
+.whatsapp-icon {
+    width: 30px;
+    height: 30px;   
+}
+
+/* Texto emergente */
+.whatsapp-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;    
+   }
+
+/* Mostrar texto emergente al hacer hover */
+.whatsapp-button:hover .whatsapp-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Mostrar el botón cuando es visible */
+.whatsapp-container.visible {
+    opacity: 1;
+    visibility: visible;    
+    transform: translateX(-10px);
+    transition: opacity 0.3s, transform 0.5s;
+}
+.contact-line{
+text-decoration: none;
+color: #444;
+margin-top: 15px;
+padding-bottom: 20px;
+}
+.contact-line a{
+    margin-right: 10px; 
+    text-decoration: none;
+ color: #444;
+}

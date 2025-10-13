@@ -69,8 +69,8 @@ body {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 15px;
         width: 200px;
-        z-index: 100;   
-     }
+        z-index: 100;
+    }
 
     .menu a {
         padding: 10px 0;
@@ -84,10 +84,14 @@ body {
         margin-right: 20px;
         font-size: 30px;
         margin-left: 22em;
+        z-index: 5;
+
     }
 
     .menu.show {
         display: flex;
+        margin-right: 22px;
+        margin-top: 30px;
     }
 }
 
@@ -175,16 +179,23 @@ li.services-Link {
     }
 
     #inicio {
-        margin-left: 52px;
+        margin: 0px;
     }
 
     .redes {
-        margin-left: 2em;
+        margin-left: 0.3em;
         color: black;
     }
 
     .redes i {
         color: black;
+    }
+
+    .banner-text {
+        padding-right: 30px;
+    }
+    .campo.boton button{
+        margin-top: 22.5px;
     }
 
 }
@@ -205,139 +216,146 @@ li.services-Link {
         height: 69px;
     }
 
+    .banner-text {
+        padding-right: 0px;
+    }
+
     .banner-text p {
         text-align: justify;
-    }    
-       }
+    }
+
+}
 
 
-    .lado-izquierdo {
-        opacity: 1;
+.lado-izquierdo {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    animation: slideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-120px) scale(0.9);
+        opacity: 0;
+    }
+
+    to {
         transform: translateX(0) scale(1);
-        animation: slideInLeft 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        opacity: 1;
     }
+}
 
-    @keyframes slideInLeft {
-        from {
-            transform: translateX(-120px) scale(0.9);
-            opacity: 0;
-        }
-
-        to {
-            transform: translateX(0) scale(1);
-            opacity: 1;
-        }
-    }
-
-    .formulario {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        width: 100%;
-        margin: auto;
-        background-color: #f5dcba;
-        padding: 20px;
-    }
-
-    .campo {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .campo label {
-        margin-bottom: 5px;
-        font-weight: 600;
-    }
-
-    .campo input {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-    }
-
-    .campo.boton {
-        grid-column: 2 / 3;
-        display: flex;
-        justify-content: center;
-    }
-
-    .campo.boton button {
-        background: #e2c7a2;
-        border: none;
-        padding: 10px 25px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-size: 16px;
-        transition: background 0.3s;
-        width: 200px;
-        align-content: center;
-    }
-
-    .campo.boton button:hover {
-        background: rgb(238, 196, 108);
-    }
-
-
-    @media (max-width: 768px) {
-        .formulario {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .curva {
-        position: relative;
-        width: 100%;
-        overflow: hidden;
-        margin-top: -6px;
-    }
-
-    /* SVG de la curva */
-    .curva svg {
-        display: block;
-        width: 100%;
-        height: 150px;
-        margin-top: -50px;
-        background-color: #f5dcba;
-
-    }
-@media (max-width: 480px){
 .formulario {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin: auto;
+    background-color: #f5dcba;
+    padding: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.campo input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.campo.boton {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+}
+
+.campo.boton button {
+    background: #e2c7a2;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+    width: 200px;
+    align-content: center;
+}
+
+.campo.boton button:hover {
+    background: rgb(238, 196, 108);
+}
+
+
+@media (max-width: 768px) {
+    .formulario {
+        grid-template-columns: 1fr;
+    }
+}
+
+.curva {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -6px;
+}
+
+/* SVG de la curva */
+.curva svg {
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-top: -50px;
+    background-color: #f5dcba;
+
+}
+
+@media (max-width: 480px) {
+    .formulario {
         display: flex;
         flex-direction: column;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        width: 320px;       
+        width: 320px;
         background-color: #f5dcba;
         padding: 20px;
         margin-right: 40px;
     }
 }
-    /* Footer dentro de la curva */
-    .footer {
-        text-align: center;
-        position: relative;
-        margin-top: -55px;
-        background-color: #f5dcba;
-    }
 
-    .footer p {
-        margin: 0;
-        font-size: 16px;
-        color: #444;
-    }
+/* Footer dentro de la curva */
+.footer {
+    text-align: center;
+    position: relative;
+    margin-top: -55px;
+    background-color: #f5dcba;
+}
 
-    .footer .sociales {
-        margin-top: 10px;
-    }
+.footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #444;
+}
 
-    .footer .sociales a {
-        color: #444;
-        text-decoration: none;
-        margin: 0 8px;
-        font-weight: 500;
-        transition: color 0.3s;
-    }
+.footer .sociales {
+    margin-top: 10px;
+}
 
-    .footer .sociales a:hover {
-        color: #b28b62;
-    }
+.footer .sociales a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer .sociales a:hover {
+    color: #b28b62;
+}

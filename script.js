@@ -144,4 +144,27 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Cookies banner
+const banner = document.getElementById('cookie-banner');
+const acceptBtn = document.getElementById('acceptCookies');
+const rejectBtn = document.getElementById('rejectCookies');
+
+
+// Verifica si ya se ha dado consentimiento
+if (!localStorage.getItem('cookieConsent')) {
+banner.style.display = 'block';
+}
+
+
+acceptBtn.addEventListener('click', () => {
+localStorage.setItem('cookieConsent', 'accepted');
+banner.style.display = 'none';
+});
+
+
+rejectBtn.addEventListener('click', () => {
+localStorage.setItem('cookieConsent', 'rejected');
+banner.style.display = 'none';
+});
+
 

@@ -29,7 +29,6 @@
     /* --- Banner de cookies --- */
     #cookie-banner {
       position: fixed;
-
       margin-left: 30em;
       transform: translateX(-50%);
       background: #fff;
@@ -41,6 +40,7 @@
       max-width: 50em;
       font-size: 16px;
       display: none;
+      margin-bottom: 15px;
       /* oculto por defecto */
     }
 
@@ -50,6 +50,7 @@
       border: none;
       border-radius: 6px;
       cursor: pointer;
+      margin-bottom: 20px;
     }
 
     #acceptCookies {

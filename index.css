@@ -11,6 +11,73 @@
       line-height: 1.4;
     }
 
+    /* --- Bloqueo visual hasta aceptar/rechazar --- */
+    #page-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(30 30 30 / 43%);
+      /* Oscurece la página */
+      z-index: 9998;
+      backdrop-filter: blur(4px);
+      /* desenfoque opcional */
+      transition: opacity 0.3s ease;
+    }
+
+    /* --- Banner de cookies --- */
+    #cookie-banner {
+      position: fixed;
+
+      margin-left: 30em;
+      transform: translateX(-50%);
+      background: #fff;
+      padding: 20px 10px 0px 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(56, 56, 56, 0.3);
+      z-index: 9999;
+      text-align: center;
+      max-width: 50em;
+      font-size: 16px;
+      display: none;
+      /* oculto por defecto */
+    }
+
+    #cookie-banner button {
+      margin: 10px 5px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #acceptCookies {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #rejectCookies {
+      background-color: #f44336;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      #cookie-banner {
+        margin-left: 23.3em;
+        padding: 20px 10px 0px 10px;
+        font-size: 16px;
+        display: none;
+        width: 40em;
+      }
+    }
+@media (max-width: 480px) {
+ #cookie-banner {
+        margin-left: 11.7em;
+        padding: 20px 10px 0px 10px;   
+        width: 20em;
+      }
+}
     /* Header */
     header {
       width: 100%;
@@ -83,8 +150,6 @@
     .logo {
       width: 150px;
       margin-left: 15px;
-
-
     }
 
     .menu-link {
@@ -1140,7 +1205,7 @@
       transition: opacity 0.3s, transform 0.5s;
     }
 
- /* Cookies banner */
+    /* Cookies banner */
 
     #cookie-banner {
       position: fixed;
@@ -1149,10 +1214,10 @@
       right: 0;
       background: #414040;
       color: #fff;
-      padding: 15px;
       text-align: center;
       font-family: sans-serif;
       display: none;
+
     }
 
     #cookie-banner button {
@@ -1161,7 +1226,8 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
-      margin-top: 20px;
+      margin-top: -10px;
+
     }
 
     #acceptCookies {

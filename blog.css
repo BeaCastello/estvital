@@ -248,7 +248,7 @@ a {
   display: flex;
   align-items: center;
   gap: 20px;
-  }
+}
 
 .códigoQR {
   width: 100px;
@@ -259,9 +259,10 @@ a {
 }
 
 .text-thirdline {
-    width: 250px;
-  }
-.second-img{
+  width: 250px;
+}
+
+.second-img {
   width: 252px;
   margin-right: 20px;
 }
@@ -378,14 +379,14 @@ a {
     width: 250px;
   }
 
-  .third-line{
+  .third-line {
     gap: 20px;
   }
 
-.text-thirdline {
-    width: 160px;    
+  .text-thirdline {
+    width: 160px;
   }
-  
+
 }
 
 
@@ -440,13 +441,28 @@ a {
   height: auto;
   display: flex;
   flex-direction: column;
-  padding-bottom: 17px;
+  padding-bottom: 13px;
+}
+
+.image-card1 img {
+  width: 150px;
+  border-radius: 8px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 13px;
 }
 
 .image-card p {
   margin-top: 15px;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.image-card1 p {
+  margin-top: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .vertical-line {
@@ -473,7 +489,7 @@ a {
 
 .imagenCenter {
   width: 800px;
-  margin-top: 30px;
+  margin-top: 45px;
   height: 570px;
 }
 
@@ -501,7 +517,17 @@ hr {
     padding: 0px;
   }
 
+  .image-card1 img {
+    width: 150px;
+    padding: 0px;
+  }
+
+
   .image-card {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .image-card1 {
     transition: transform 0.5s ease-in-out;
   }
 
@@ -517,7 +543,11 @@ hr {
   }
 
   .image-card p {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+  }
+
+  .image-card1 p {
+    margin-bottom: 10px;
   }
 
   .center-section {
@@ -550,28 +580,66 @@ hr {
   .image-card img {
     width: 100px;
   }
+
+  .image-card1 img {
+    width: 100px;
+  }
 }
 
-@media (max-width: 480px){
-  .container{
+@media (max-width: 480px) {
+  .container {
     display: flex;
     flex-direction: column;
   }
-  .left-section{
+
+  .left-section {
     padding: 0px;
     margin-top: -10px;
     margin-left: 20px;
     width: max-content;
   }
+
+  .image-card img .image-card1 img {
+    width: 310px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+  }
+
+  .image-card p {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 0px;
+
+  }
+
+  .imagenCenter {
+    width: 350px;
+    margin-top: 40px;
+    margin-left: 12px;
+    height: auto;
+  }
+
+  .right-section {
+    margin-top: 22em;
+  }
+
   .image-card img {
-        width: 310px;
-        margin-left: 10px;
-    }
+    width: 330px;
+    margin-bottom: 20px;
+  }
+
+  .image-card1 img {
+    width: 330px;
+    margin-bottom: 20px;
+    margin-left: 12px;
+  }
+
+  .image-card1 p {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
 }
-
-
-
-
 
 /*Container noticia */
 .container-noticia {
@@ -580,7 +648,6 @@ hr {
   gap: 48px;
   margin-top: 10px;
 }
-
 
 @media (max-width: 768px) {
   .container-noticia img {
@@ -591,96 +658,108 @@ hr {
   .container-noticia {
     gap: 20px;
     padding: 0px;
-    margin-top: 30px;
+    margin-top: 40px;
     margin-left: 12px;
+        }
+    }
+
+@media (max-width: 480px){
+  .container-noticia {
+        display: flex;
+    flex-direction: column;
+    }
+    .container-noticia img {
+        width: 330px;
+        margin-left: 8px;
+}
+}
+  
+
+  /* Estilo Whatsapp */
+  .whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
   }
-}
 
-/* Estilo Whatsapp */
-.whatsapp-container {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: flex;
-  align-items: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s, visibility 0.3s;
-  z-index: 1000;
-}
+  /* Botón de WhatsApp */
+  .whatsapp-button {
+    display: flex;
+    align-items: center;
+    background-color: #25d366;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    position: relative;
+    transition: background-color 0.3s;
+  }
 
-/* Botón de WhatsApp */
-.whatsapp-button {
-  display: flex;
-  align-items: center;
-  background-color: #25d366;
-  padding: 10px;
-  border-radius: 50px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  position: relative;
-  transition: background-color 0.3s;
-}
+  /* Icono de WhatsApp */
+  .whatsapp-icon {
+    width: 30px;
+    height: 30px;
+  }
 
-/* Icono de WhatsApp */
-.whatsapp-icon {
-  width: 30px;
-  height: 30px;
-}
+  /* Texto emergente */
+  .whatsapp-text {
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
 
-/* Texto emergente */
-.whatsapp-text {
-  margin-left: 10px;
-  margin-right: 10px;
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  white-space: nowrap;
-}
+  /* Mostrar texto emergente al hacer hover */
+  .whatsapp-button:hover .whatsapp-text {
+    opacity: 1;
+    transform: translateX(0);
+  }
 
-/* Mostrar texto emergente al hacer hover */
-.whatsapp-button:hover .whatsapp-text {
-  opacity: 1;
-  transform: translateX(0);
-}
+  /* Mostrar el botón cuando es visible */
+  .whatsapp-container.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-10px);
+    transition: opacity 0.3s, transform 0.5s;
+  }
 
-/* Mostrar el botón cuando es visible */
-.whatsapp-container.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-10px);
-  transition: opacity 0.3s, transform 0.5s;
-}
+  /* Footer dentro de la curva */
+  .footer {
+    text-align: center;
+    position: relative;
+    background-color: #f5dcba;
+  }
 
-/* Footer dentro de la curva */
-.footer {
-  text-align: center;
-  position: relative;
-  background-color: #f5dcba;
-}
+  .p-footer {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #444;
+    padding-top: 20px;
+  }
 
-.p-footer {
-  margin-top: 20px;
-  font-size: 16px;
-  color: #444;
-  padding-top: 20px;
-}
+  .footer .sociales {
+    margin-top: 10px;
+    padding-bottom: 20px;
+  }
 
-.footer .sociales {
-  margin-top: 10px;
-  padding-bottom: 20px;
-}
+  .footer .sociales a {
+    color: #444;
+    text-decoration: none;
+    margin: 0 8px;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
 
-.footer .sociales a {
-  color: #444;
-  text-decoration: none;
-  margin: 0 8px;
-  font-weight: 500;
-  transition: color 0.3s;
-}
+  .footer .sociales a:hover {
+    color: #b28b62;
+  }
 
-.footer .sociales a:hover {
-  color: #b28b62;
-}
-
-@media (max-width: 768px) {}
+ 

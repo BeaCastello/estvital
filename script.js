@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const banner = document.getElementById("cookie-banner");
   const overlay = document.getElementById("page-overlay");
   const acceptBtn = document.getElementById("acceptCookies");
@@ -25,100 +25,100 @@ document.addEventListener("DOMContentLoaded", function() {
   acceptBtn.addEventListener("click", () => hideBanner("accepted"));
   rejectBtn.addEventListener("click", () => hideBanner("rejected"));
 });
- 
-  
-  
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("menu");
 
-    toggle.addEventListener("click", function () {
-      menu.classList.toggle("show");
-    });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("menu-toggle");
+  const menu = document.getElementById("menu");
+
+  toggle.addEventListener("click", function () {
+    menu.classList.toggle("show");
   });
-    
-    // Slider
+});
+
+// Slider
 const frases = [
-      {
-        texto: "Procuremos más ser padres de nuestro porvenir que hijos de nuestro pasado.",
-        autor: "Miguel de Unamuno"
-      },
-      {
-        texto: "El secreto de la vida consiste en saber lo que quieres y recordar lo que eres.",
-        autor: "Pío Baroja"
-      },
-      {
-        texto: "Vencerse a sí mismo es la mayor de las victorias.",
-        autor: "Pedro Calderón de la Barca"
-      },
-      {
-        texto: "El esfuerzo es la magia que transforma los éxitos en realidad",
-        autor: "Rafael Nadal"
+  {
+    texto: "Procuremos más ser padres de nuestro porvenir que hijos de nuestro pasado.",
+    autor: "Miguel de Unamuno"
+  },
+  {
+    texto: "El secreto de la vida consiste en saber lo que quieres y recordar lo que eres.",
+    autor: "Pío Baroja"
+  },
+  {
+    texto: "Vencerse a sí mismo es la mayor de las victorias.",
+    autor: "Pedro Calderón de la Barca"
+  },
+  {
+    texto: "El esfuerzo es la magia que transforma los éxitos en realidad",
+    autor: "Rafael Nadal"
+  }
+];
+
+const fraseEl = document.getElementById("frase");
+const autorEl = document.getElementById("autor");
+const botonesContainer = document.querySelector(".botones");
+
+let indice = 0;
+
+// Crear botones
+frases.forEach((_, i) => {
+  const btn = document.createElement("button");
+  btn.classList.add("boton");
+  if (i === 0) btn.classList.add("activo");
+  btn.addEventListener("click", () => mostrarFrase(i));
+  botonesContainer.appendChild(btn);
+});
+
+function mostrarFrase(i) {
+  indice = i;
+  fraseEl.textContent = "“" + frases[i].texto + "”";
+  autorEl.textContent = "— " + frases[i].autor;
+
+  document.querySelectorAll(".boton").forEach((btn, idx) => {
+    btn.classList.toggle("activo", idx === i);
+  });
+}
+
+
+// Aboutme
+
+const elements = document.querySelectorAll('.about-left, .about-right');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (entry.target.classList.contains('about-left')) {
+        entry.target.classList.add('show-left');
       }
-    ];
+      if (entry.target.classList.contains('about-right')) {
+        entry.target.classList.add('show-right');
+      }
+    } else {
 
-    const fraseEl = document.getElementById("frase");
-    const autorEl = document.getElementById("autor");
-    const botonesContainer = document.querySelector(".botones");
-
-    let indice = 0;
-
-    // Crear botones
-    frases.forEach((_, i) => {
-      const btn = document.createElement("button");
-      btn.classList.add("boton");
-      if (i === 0) btn.classList.add("activo");
-      btn.addEventListener("click", () => mostrarFrase(i));
-      botonesContainer.appendChild(btn);
-    });
-
-    function mostrarFrase(i) {
-      indice = i;
-      fraseEl.textContent = "“" + frases[i].texto + "”";
-      autorEl.textContent = "— " + frases[i].autor;
-
-      document.querySelectorAll(".boton").forEach((btn, idx) => {
-        btn.classList.toggle("activo", idx === i);
-      });
+      entry.target.classList.remove('show-left', 'show-right');
     }
+  });
+}, { threshold: 0.2 }); // 20% visible para activar
+
+elements.forEach(el => observer.observe(el));
 
 
-     // Aboutme
- 
-   const elements = document.querySelectorAll('.about-left, .about-right');
+//Workshops
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.target.classList.contains('about-left')) {
-          entry.target.classList.add('show-left');
-        }
-        if (entry.target.classList.contains('about-right')) {
-          entry.target.classList.add('show-right');
-        }
-      } else {
-       
-        entry.target.classList.remove('show-left', 'show-right');
-      }
-    });
-  }, { threshold: 0.2 }); // 20% visible para activar
+const faqItems = document.querySelectorAll(".faq-item");
 
-  elements.forEach(el => observer.observe(el));
+faqItems.forEach(item => {
+  item.addEventListener("click", () => {
+    item.classList.toggle("active");
+    let sign = item.querySelector("span");
+    sign.textContent = item.classList.contains("active") ? "−" : "+";
+  });
+});
 
-
-      //Workshops
-
-   const faqItems = document.querySelectorAll(".faq-item");
-
-    faqItems.forEach(item => {
-      item.addEventListener("click", () => {
-        item.classList.toggle("active");
-        let sign = item.querySelector("span");
-        sign.textContent = item.classList.contains("active") ? "−" : "+";
-      });
-    });
-
-   //Workshops Imagen Animación
+//Workshops Imagen Animación
 
 document.addEventListener('DOMContentLoaded', () => {
   const el = document.querySelector('.container-imgWorkshops');
@@ -126,12 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const options = {
     root: null,
-    rootMargin: '0px 0px -10% 0px', 
+    rootMargin: '0px 0px -10% 0px',
     threshold: 0.1
   };
 
-  const restartAnimation = (element) => {   
-    element.classList.remove('play');   
+  const restartAnimation = (element) => {
+    element.classList.remove('play');
     void element.offsetWidth;
     element.classList.add('play');
   };
@@ -139,9 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
   if ('IntersectionObserver' in window) {
     const obs = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {          
+        if (entry.isIntersecting) {
           restartAnimation(entry.target);
-        } else {          
+        } else {
           entry.target.classList.remove('play');
         }
       });
@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     obs.observe(el);
   } else {
-        const check = () => {
+    const check = () => {
       const rect = el.getBoundingClientRect();
       if (rect.top < window.innerHeight * 0.9 && rect.bottom > 0) {
         restartAnimation(el);
@@ -166,11 +166,11 @@ document.addEventListener('DOMContentLoaded', () => {
 const whatsappContainer = document.getElementById('whatsapp-container');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        whatsappContainer.classList.add('visible');
-    } else {
-        whatsappContainer.classList.remove('visible');
-    }
+  if (window.scrollY > 50) {
+    whatsappContainer.classList.add('visible');
+  } else {
+    whatsappContainer.classList.remove('visible');
+  }
 });
 
 // Cookies banner
@@ -181,19 +181,46 @@ const rejectBtn = document.getElementById('rejectCookies');
 
 // Verifica si ya se ha dado consentimiento
 if (!localStorage.getItem('cookieConsent')) {
-banner.style.display = 'block';
+  banner.style.display = 'block';
 }
 
 
 acceptBtn.addEventListener('click', () => {
-localStorage.setItem('cookieConsent', 'accepted');
-banner.style.display = 'none';
+  localStorage.setItem('cookieConsent', 'accepted');
+  banner.style.display = 'none';
 });
 
 
 rejectBtn.addEventListener('click', () => {
-localStorage.setItem('cookieConsent', 'rejected');
-banner.style.display = 'none';
+  localStorage.setItem('cookieConsent', 'rejected');
+  banner.style.display = 'none';
 });
 
 
+// Conectarse con emailjs
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+
+  emailjs.sendForm("service_yftwelk", "template_9a4t6zr", this)
+    .then(() => {
+      alert("¡Solicitud enviada!");
+      this.reset(); hours.innerHTML = ""; feInput.value = ""; hoInput.value = "";
+      document.querySelectorAll(".day, .hour").forEach(x => x.classList.remove("selected"));
+    }, () => {
+      alert("Error al enviar, inténtalo luego.");
+    });
+});
+
+
+// Email de bienvenida para destinatario
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+ 
+  emailjs.sendForm("service_yftwelk", "template_ynytd9k", this)
+    .then(function () {
+      alert("Solicitud enviada con éxito. Revisa tu correo.");
+    }, function (error) {
+      console.error("Error:", error);
+      alert("Hubo un problema al enviar la solicitud.");
+    });
+
+  this.reset();
+});

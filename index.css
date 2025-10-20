@@ -1047,7 +1047,7 @@
       margin-top: 8px;
     }
 
-    .btn-submit {
+    .submit {
       background: var(--white);
       color: var(--text-dark);
       border: none;
@@ -1059,12 +1059,12 @@
       transition: transform .15s ease, box-shadow .15s ease;
     }
 
-    .btn-submit:hover {
+    .submit:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
     }
 
-    .btn-submit:active {
+    .submit:active {
       transform: translateY(0);
     }
 

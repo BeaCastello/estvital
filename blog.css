@@ -342,7 +342,7 @@ a {
     margin: 0px;
   }
 
-   .menu-toggle {
+  .menu-toggle {
     margin-left: 5em;
   }
 
@@ -487,7 +487,7 @@ a {
 }
 
 .imagenCenter {
-  width: 800px;
+  width: 700px;
   margin-top: 45px;
   height: 570px;
 }
@@ -643,97 +643,69 @@ hr {
 }
 
 /*Prensa española*/
-.news-container {
+#noticeContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
+  justify-content: center;
+  gap: 1.5rem;
   padding: 1rem;
-  margin: auto;
+  grid-template-columns: repeat(6, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.news-card {
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s;
+#noticeContainer img {
+  width: 200px;
+  height: 240px;
 }
 
-.news-card:hover {
-  transform: scale(1.02);
+.info p {
+  width: 200px;
+  margin-bottom: 90px;
 }
 
-.news-card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
+.notice {
+  display: grid;
+  justify-content: center
 }
 
-.news-content {
-  padding: 1rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.news-content h2 {
-  margin: 0 0 0.5rem 0;
-  font-size: 1.2rem;
-  color: #003366;
-}
-
-.news-content p {
-  flex: 1;
-  margin: 0 0 1rem 0;
-  font-size: 0.95rem;
-  color: #333;
-}
-
-.news-content a {
-  text-decoration: none;
-  color: #fff;
-  background: #003366;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  align-self: flex-start;
-  transition: background 0.2s;
-}
-
-.news-content a:hover {
-  background: #0055aa;
-}
-
-@media (max-width: 600px) {
-  .news-card img {
-    height: 150px;
-  }
+.encabezado-noticia {
+  padding: 20px;
+  text-align: center
 }
 
 @media (max-width: 768px) {
-  .news-container {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
-    padding: 0px;
+  #noticeContainer {
+    grid-template-columns: repeat(2, 1fr);
+    align-self: center;
   }
 
-  .news-card img {
-    height: 240px;
+  #noticeContainer img {
+    margin-top: 30px;
   }
+
+  h1 {
+    padding: 1px;
+    margin-top: 20px;
+  }
+
+  .encabezado-noticia {
+    padding: 0px;
+    margin-top: 20px;
+    }
+    .info p {
+  width: 200px;
+  margin-bottom: 70px;
+}
 }
 
-@media (max-width: 768px) {
-  .news-container {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    padding: 0px;
-    
-  }
-  h1{
-   text-align: center;
-   
+@media (max-width: 480px) {
+  #noticeContainer {
+    grid-template-columns: repeat(1, 1fr);
+    align-self: center;
   }
 
-}
+
+   }
 
 
 /* Estilo Whatsapp */
